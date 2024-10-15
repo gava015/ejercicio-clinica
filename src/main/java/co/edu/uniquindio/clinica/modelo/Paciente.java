@@ -23,9 +23,6 @@ public class Paciente {
     public String toString() {
         return "CC." + cedula +
                 ", Paciente: " + nombre +
-                ", Tipo suscripción: " + (suscripcion instanceof SuscripcionPremium
-                ? TipoSuscripcion.PREMIUM
-                : TipoSuscripcion.BASICA
-        );
+                ", Tipo suscripción: " + suscripcion.getTipoSuscripcion();
     }
 }

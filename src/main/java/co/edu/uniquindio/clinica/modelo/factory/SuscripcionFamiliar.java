@@ -25,12 +25,12 @@ public class SuscripcionFamiliar implements Suscripcion {
                         .build(),
                 Servicio.builder()
                         .id(String.valueOf(UUID.randomUUID()))
-                        .precio((double)40000)
+                        .precio((double) 40000)
                         .nombre("Nefrología")
                         .build(),
                 Servicio.builder()
                         .id(String.valueOf(UUID.randomUUID()))
-                        .precio((double)40000)
+                        .precio((double) 40000)
                         .nombre("Cardiología")
                         .build(),
                 Servicio.builder()
@@ -44,8 +44,8 @@ public class SuscripcionFamiliar implements Suscripcion {
     @Override
     public Factura generarFacturaCobro(Servicio servicioSeleccionado) {
         Servicio servicio = servicioSeleccionado;
-        for (Servicio servicioDisponible: getServiciosDisponibles()) {
-            if(servicioDisponible.getNombre().equalsIgnoreCase(servicioSeleccionado.getNombre())) {
+        for (Servicio servicioDisponible : getServiciosDisponibles()) {
+            if (servicioDisponible.getNombre().equalsIgnoreCase(servicioSeleccionado.getNombre())) {
                 servicio = servicioDisponible;
                 break;
             }
